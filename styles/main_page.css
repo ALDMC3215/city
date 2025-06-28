@@ -38,13 +38,16 @@
 }
 
 :root {
-  --primary-purple: #8a2be2;
-  --light-purple: #d8bfd8;
-  --lighter-purple: #e6e6fa;
+  --primary-purple: #7993F0;
+  --light-purple: #AEB2FF;
+  --secondary-color: #D9AC3A;
+  --secondary-pale: #FFE783;
   --background-start: #b39ddb;
   --background-end: #8e24aa;
-  --text-color: #333;
-  --white-text: #fff;
+  --text-color: #383D38;
+  --accent-1: #FD5E53;
+  --white-text: #FFFFFF;
+  --footer-background: #F5F7FE;
 }
 
 header {
@@ -81,17 +84,18 @@ header {
 }
 
 .navbar-nav .nav-link {
-  color: var(--white-text);
+  color: var(--text-color);
+
   margin-right: 45px;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 .navbar-nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--primary-purple) !important;
 }
 
 .navbar-brand {
-  color: var(--white-text) !important;
+  color: var(--text-color) !important;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -206,6 +210,10 @@ header {
   position: absolute;
   bottom: 0;
   z-index: -2;
+}
+/* Icon color for large screens */
+.sm-icon span svg {
+  color: var(--text-color);
 }
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
