@@ -38,13 +38,16 @@
 }
 
 :root {
-  --primary-purple: #8a2be2;
-  --light-purple: #d8bfd8;
-  --lighter-purple: #e6e6fa;
+  --primary-purple: #7993F0;
+  --light-purple: #AEB2FF;
+  --secondary-color: #D9AC3A;
+  --secondary-pale: #FFE783;
   --background-start: #b39ddb;
   --background-end: #8e24aa;
-  --text-color: #333;
-  --white-text: #fff;
+  --text-color: #383D38;
+  --accent-1: #FD5E53;
+  --white-text: #FFFFFF;
+  --footer-background: #F5F7FE;
 }
 
 header {
@@ -57,16 +60,16 @@ header {
   flex-direction: column;
   color: var(--text-color);
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .navbar-collapse {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 100px;
-  width: 50px;
-  gap: 76px;
+  width: 100%;
+  gap: 2rem;
   background: rgba(255, 255, 255, 0.1);
   background-blend-mode: plus-lighter;
   box-shadow: inset 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.5),
@@ -81,17 +84,17 @@ header {
 }
 
 .navbar-nav .nav-link {
-  color: black;
+  color: var(--text-color);
   margin-right: 45px;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 .navbar-nav .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--primary-purple) !important;
 }
 
 .navbar-brand {
-  color: var(--white-text) !important;
+  color: var(--text-color) !important;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -112,7 +115,7 @@ header {
   top: 110px;
 }
 
-.serach {
+.search-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,7 +132,7 @@ header {
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
 }
-.serach svg {
+.search-box svg {
   margin-left: 15px;
 }
 
@@ -206,6 +209,10 @@ header {
   position: absolute;
   bottom: 0;
   z-index: -2;
+}
+/* Icon color for large screens */
+.sm-icon span svg {
+  color: var(--text-color);
 }
 /* Responsive Adjustments */
 @media (max-width: 991.98px) {
