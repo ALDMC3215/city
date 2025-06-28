@@ -1,0 +1,354 @@
+/* Import Reset CSS */
+@import url("reset.css");
+
+/* Font Faces */
+@font-face {
+  font-family: shabnam;
+  src: url("../fonts/Shabnam.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: shabnamBold;
+  src: url("../fonts/Shabnam-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: shabnamLight;
+  src: url("../fonts/Shabnam-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: shabnamMedium;
+  src: url("../fonts/Shabnam-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: NotoNastaliqUrdu;
+  src: url("../fonts/NotoNastaliqUrdu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-purple: #8a2be2;
+  --light-purple: #d8bfd8;
+  --lighter-purple: #e6e6fa;
+  --background-start: #b39ddb;
+  --background-end: #8e24aa;
+  --text-color: #333;
+  --white-text: #fff;
+}
+
+header {
+  font-family: shabnamMedium, sans-serif;
+  background-image: url("../images/Landing\ Page.png");
+  background-size: 100% 100%, 100% 100%, cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  position: relative;
+  z-index: -1;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  width: 50px;
+  gap: 76px;
+  background: rgba(255, 255, 255, 0.1);
+  background-blend-mode: plus-lighter;
+  box-shadow: inset 3px 3px 0.5px -3.5px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 1px -2px #666666, inset -2px -2px 1px -2px #666666,
+    inset 0px 0px 0px 1px #a6a6a6, inset 0px 0px 22px #f2f2f2;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.navbar-nav {
+  padding: 10px 0;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  margin-right: 45px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-brand {
+  color: var(--white-text) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 85%;
+  margin: auto;
+}
+
+.search-container {
+  position: absolute;
+  top: 110px;
+}
+
+.serach {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  width: 650px;
+  height: 40px;
+}
+.input-group input {
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+.serach svg {
+  margin-left: 15px;
+}
+
+.ai {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+}
+
+.ai span img {
+  width: 25px;
+  height: 25px;
+  padding: 5px 0 0 2px;
+}
+
+.search-input-group {
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  height: 3.5rem; /* Fixed height for search bar */
+}
+
+.search-input {
+  border: none;
+  box-shadow: none;
+  padding-right: 1.5rem; /* Adjust padding for RTL */
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  background-color: transparent; /* Keep input background transparent */
+}
+
+.search-input:focus {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.search-icon-prepend,
+.search-icon-append {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  color: var(--primary-purple);
+  font-size: 1.2rem;
+}
+
+.logo-text {
+  position: absolute;
+  top: 180px;
+  width: 411px;
+  height: 157px;
+}
+
+.description-text {
+  position: absolute;
+  top: 350px;
+  width: 80%;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.botom-img {
+  width: 850px;
+  height: 300px;
+  position: absolute;
+  bottom: 0;
+  z-index: -2;
+}
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .sm-icon span svg {
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+  }
+
+  .sm-icon img {
+    width: 25px;
+    margin-left: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: black;
+  }
+
+  .navbar-toggler svg {
+    color: black;
+  }
+
+  .logo-text {
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    top: 90px;
+  }
+
+  .description-text {
+    position: absolute;
+    top: 280px;
+    width: 650px;
+    font-size: 15px;
+  }
+
+  .botom-img {
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+  }
+}
+
+@media (max-width: 767px) {
+  .sm-icon span svg {
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+  }
+
+  .sm-icon img {
+    width: 25px;
+    margin-left: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: black;
+  }
+
+  .navbar-toggler svg {
+    color: black;
+  }
+
+  .logo-text {
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+  }
+
+  .description-text {
+    position: absolute;
+    top: 300px;
+    width: 700px;
+    font-size: 15px;
+  }
+
+  .botom-img {
+    width: 550px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  header {
+    height: 350px;
+  }
+
+  .sm-icon span svg {
+    font-size: 20px;
+    margin-left: 10px;
+    color: black;
+  }
+
+  .sm-icon img {
+    width: 25px;
+    margin-left: 10px;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: black;
+  }
+
+  .navbar-toggler svg {
+    color: black;
+  }
+
+  .logo-text {
+    width: 170px;
+    height: 70px;
+    position: absolute;
+    top: 90px;
+  }
+
+  .description-text {
+    position: absolute;
+    top: 200px;
+    width: 450px;
+    font-size: 9px;
+  }
+
+  .botom-img {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+  }
+}
